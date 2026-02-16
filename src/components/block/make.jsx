@@ -26,7 +26,7 @@ export default function App() {
   useEffect(() => {
     const fetchMakes = async () => {
       try {
-        const response = await fetch(`${baseUrl}/api/listing/make` , { cache: 'force-cache'});
+        const response = await fetch(`${baseUrl}/api/listing` , { cache: 'force-cache'});
         const data = await response.json();
         setMakes(data);
         setLoading(false);
@@ -121,3 +121,4 @@ export default function App() {
     </div>
   );
 }
+
